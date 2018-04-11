@@ -91,7 +91,7 @@ LRESULT CALLBACK WndProc(HWND hwnd,UINT Message,WPARAM wParam,LPARAM lParam)
 	}
 
 
-		/*case WM_VSCROLL:
+		WM_VSCROLL:
 		switch (LOWORD(wParam))					
 		{
 		case SB_LINEDOWN:
@@ -128,8 +128,7 @@ LRESULT CALLBACK WndProc(HWND hwnd,UINT Message,WPARAM wParam,LPARAM lParam)
 		SetScrollPos(hwnd, SB_HORZ, nHorizPosition, true);
 		InvalidateRect(hwnd, NULL, true);
 
-		*/
-		//////
+		
 	
 	
 	case WM_KEYDOWN:
@@ -184,7 +183,7 @@ LRESULT CALLBACK WndProc(HWND hwnd,UINT Message,WPARAM wParam,LPARAM lParam)
 			AutoMove2 ();
 			break;
 			
-		//skrolling
+		//
 		case 'a':
 		case'A':
 			if(pos_x<0)
@@ -434,11 +433,7 @@ wc.cbSize		 = sizeof(WNDCLASSEX);
 		return 0;
 	}
 
-	/*
-		This is the heart of our program where all input is processed and 
-		sent to WndProc. Note that GetMessage blocks code flow until it receives something, so
-		this loop will not produce unreasonably high CPU usage
-	*/
+	
 	while(GetMessage(&Msg, NULL, 0, 0) > 0) { /* If no error is received... */
 		TranslateMessage(&Msg); /* Translate key codes to chars if present */
 		DispatchMessage(&Msg); /* Send it to WndProc */
