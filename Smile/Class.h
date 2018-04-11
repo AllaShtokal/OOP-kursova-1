@@ -85,7 +85,7 @@ void MoveKino(int dx,int dy)
 {
 HBRUSH hblackbrush, holdbrush;
 HPEN hblackpen, holdpen;
-///тєнь
+///shadow
 hblackpen=CreatePen(PS_SOLID, 3, RGB(139,134, 130));
 hblackbrush=CreateSolidBrush(RGB(139, 134, 130));
 holdpen=(HPEN)::SelectObject( hdc, hblackpen );
@@ -107,7 +107,7 @@ holdbrush = (HBRUSH)::SelectObject( hdc, hblackbrush );
 
 		::SelectObject( hdc, holdbrush );
         DeleteObject( hblackbrush );
-//двері
+//door
 hblackpen=CreatePen(PS_SOLID, 3, RGB(0, 0, 0));
 hblackbrush=CreateSolidBrush(RGB(255,255,100));
 holdpen=(HPEN)::SelectObject( hdc, hblackpen );
@@ -118,7 +118,7 @@ holdbrush = (HBRUSH)::SelectObject( hdc, hblackbrush );
 
 		::SelectObject( hdc, holdbrush );
         DeleteObject( hblackbrush );
-//kolonu
+//pillars
 hblackpen=CreatePen(PS_SOLID, 3, RGB(0, 0, 0));
 hblackbrush=CreateSolidBrush(RGB(255,255,100));
 holdpen=(HPEN)::SelectObject( hdc, hblackpen );
@@ -142,7 +142,7 @@ holdbrush = (HBRUSH)::SelectObject( hdc, hblackbrush );
 
 		::SelectObject( hdc, holdbrush );
         DeleteObject( hblackbrush );
-//текст
+//text
 HFONT hfont;
 LOGFONT lf;
 		memset(&lf, 0, sizeof(lf));
@@ -270,7 +270,7 @@ wy=wy-10;
 }
 void get_smile(Smile rhs)
 {
-//для копіюючого конструктора
+//for copy constructor
 }
 Smile return_smile()
 {
@@ -284,14 +284,14 @@ Smile operator+(Smile obj) {
           Smile tmp;      
  tmp.wx = wx + obj.wx;  
  tmp.wy = wy + obj.wy;    
- return tmp;      // Повертає модифікований тимчасовий об'єкт 
+ return tmp;      // return ma modified temporary object 
 }
  virtual void Draw(HDC hdc)
 {
 HBRUSH hblackbrush, holdbrush;
 HPEN hblackpen, holdpen;
 
-//ñìàéë
+//
 if (active)
 {hblackpen=CreatePen(PS_SOLID, 3, RGB(160, 82 ,45));
 hblackbrush=CreateSolidBrush(RGB(160, 82 ,45));
@@ -350,9 +350,9 @@ hblackpen=CreatePen(PS_SOLID, 3, RGB(0, 0, 0));
 hblackbrush=CreateSolidBrush(RGB(255, 255, 255));
 holdpen=(HPEN)::SelectObject( hdc, hblackpen );
 holdbrush = (HBRUSH)::SelectObject( hdc, hblackbrush );
-::Ellipse(hdc, x+wx/4+10,y+wx/4,x+wx/4+10+12,y+wy/4+10);//î÷³
-::Ellipse(hdc, x+wx/2+wx/4-10-12,y+wx/4,x+wx/2+wx/4-10,y+wx/4+10);//î÷³
-Arc(hdc, x, y+27 , x+wx ,y+wy ,  x+wx, y+wy-21,x+5, y+wy-21 );  //óëèáêà
+::Ellipse(hdc, x+wx/4+10,y+wx/4,x+wx/4+10+12,y+wy/4+10);//
+::Ellipse(hdc, x+wx/2+wx/4-10-12,y+wx/4,x+wx/2+wx/4-10,y+wx/4+10);
+Arc(hdc, x, y+27 , x+wx ,y+wy ,  x+wx, y+wy-21,x+5, y+wy-21 );  
 
 }
 else
@@ -451,7 +451,7 @@ void Draw(HDC hdc)
 HBRUSH hblackbrush, holdbrush;
 HPEN hblackpen, holdpen;
 
-//ñìàéë
+
 if (active)
 {
 	hblackpen=CreatePen(PS_SOLID, 3, RGB(160, 82 ,45));
@@ -503,7 +503,7 @@ holdbrush = (HBRUSH)::SelectObject( hdc, hblackbrush );
 		::SelectObject( hdc, holdbrush );
         DeleteObject( hblackbrush );
 
-// текст
+// text2
 		POINT oldpoint;
 if (active)
 {
@@ -524,9 +524,9 @@ hblackbrush=CreateSolidBrush(RGB(255, 255, 0));
 holdpen=(HPEN)::SelectObject( hdc, hblackpen );
 holdbrush = (HBRUSH)::SelectObject( hdc, hblackbrush );
 ::Ellipse(hdc, x+wx/4+10,y+wx/4,x+wx/4+10+12,y+wy/4+10);//î÷³
-::Ellipse(hdc, x+wx/2+wx/4-10-12,y+wx/4,x+wx/2+wx/4-10,y+wx/4+10);//î÷³
-::MoveToEx(hdc,x+1.5*wx/8,y+wy/2+wy/4-10,&oldpoint);//óëèáêà
-::LineTo (hdc,x+7*wx/8,y+wy/2+wy/4-10);//óëèáêà
+::Ellipse(hdc, x+wx/2+wx/4-10-12,y+wx/4,x+wx/2+wx/4-10,y+wx/4+10);//
+::MoveToEx(hdc,x+1.5*wx/8,y+wy/2+wy/4-10,&oldpoint);//
+::LineTo (hdc,x+7*wx/8,y+wy/2+wy/4-10);//
 }
 ::SelectObject( hdc, holdpen );
         DeleteObject( hblackpen );
@@ -652,7 +652,7 @@ Arc(hdc, x, y , x+wx ,y+wy-21 , x+5, y+wy-21, x+wx, y+wy-21 );  //óëèáêà
 
 		::SelectObject( hdc, holdbrush );
         DeleteObject( hblackbrush );
-//òåêñò
+//
 HFONT hfont;
 LOGFONT lf;
 		memset(&lf, 0, sizeof(lf));
