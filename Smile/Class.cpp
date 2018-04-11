@@ -4,7 +4,7 @@ void Kinoteatr::DrawKino(HDC hdc)
 {
 HBRUSH hblackbrush, holdbrush;
 HPEN hblackpen, holdpen;
-///тєнь
+///shdow
 hblackpen=CreatePen(PS_SOLID, 3, RGB(139,134, 130));
 hblackbrush=CreateSolidBrush(RGB(139, 134, 130));
 holdpen=(HPEN)::SelectObject( hdc, hblackpen );
@@ -26,7 +26,7 @@ holdbrush = (HBRUSH)::SelectObject( hdc, hblackbrush );
 
 		::SelectObject( hdc, holdbrush );
         DeleteObject( hblackbrush );
-//двері
+//door
 hblackpen=CreatePen(PS_SOLID, 3, RGB(0, 0, 0));
 hblackbrush=CreateSolidBrush(RGB(255,255,100));
 holdpen=(HPEN)::SelectObject( hdc, hblackpen );
@@ -37,7 +37,7 @@ holdbrush = (HBRUSH)::SelectObject( hdc, hblackbrush );
 
 		::SelectObject( hdc, holdbrush );
         DeleteObject( hblackbrush );
-//kolonu
+//pillars
 hblackpen=CreatePen(PS_SOLID, 3, RGB(0, 0, 0));
 hblackbrush=CreateSolidBrush(RGB(255,255,100));
 holdpen=(HPEN)::SelectObject( hdc, hblackpen );
@@ -61,7 +61,7 @@ holdbrush = (HBRUSH)::SelectObject( hdc, hblackbrush );
 
 		::SelectObject( hdc, holdbrush );
         DeleteObject( hblackbrush );
-//текст
+//text
 HFONT hfont;
 LOGFONT lf;
 		memset(&lf, 0, sizeof(lf));
@@ -91,21 +91,21 @@ void Smile::Draw(HDC hdc)
 HBRUSH hblackbrush, holdbrush;
 HPEN hblackpen, holdpen;
 
-//ñìàéë
+//
 if (active)
 {hblackpen=CreatePen(PS_SOLID, 3, RGB(160, 82 ,45));
 hblackbrush=CreateSolidBrush(RGB(160, 82 ,45));
 holdpen=(HPEN)::SelectObject( hdc, hblackpen );
 holdbrush = (HBRUSH)::SelectObject( hdc, hblackbrush );
 ::Ellipse(hdc, x-6,y+wy-6,x+wx+6,y+wy+6);
-	//////
+	
 ::SelectObject( hdc, holdpen );
         DeleteObject( hblackpen );
 
 		::SelectObject( hdc, holdbrush );
         DeleteObject( hblackbrush );
 
-////////
+
 hblackpen=CreatePen(PS_SOLID, 3, RGB(0, 0, 0));
 hblackbrush=CreateSolidBrush(RGB(255, 0, 0));
 holdpen=(HPEN)::SelectObject( hdc, hblackpen );
@@ -259,7 +259,7 @@ holdbrush = (HBRUSH)::SelectObject( hdc, hblackbrush );
 		::SelectObject( hdc, holdbrush );
         DeleteObject( hblackbrush );
 
-// текст
+// text2
 		POINT oldpoint;
 if (active)
 {
@@ -289,7 +289,7 @@ holdbrush = (HBRUSH)::SelectObject( hdc, hblackbrush );
 
 		::SelectObject( hdc, holdbrush );
         DeleteObject( hblackbrush );
-//òåêñò
+//
 HFONT hfont;
 LOGFONT lf;
 		memset(&lf, 0, sizeof(lf));
@@ -314,7 +314,7 @@ void Smile33:: Draw(HDC hdc)
 HBRUSH hblackbrush, holdbrush;
 HPEN hblackpen, holdpen;
 
-//ñìàéë
+//
 if (active)
 {
 	hblackpen=CreatePen(PS_SOLID, 3, RGB(160, 82 ,45));
@@ -396,7 +396,7 @@ Arc(hdc, x, y , x+wx ,y+wy-21 , x+5, y+wy-21, x+wx, y+wy-21 );  //óëèáêà
 
 		::SelectObject( hdc, holdbrush );
         DeleteObject( hblackbrush );
-//òåêñò
+//
 HFONT hfont;
 LOGFONT lf;
 		memset(&lf, 0, sizeof(lf));
